@@ -14,6 +14,8 @@ class CreateBehaviorsTable extends Migration
     {
         Schema::create('behaviors', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('behave_date');
+            $table->string('content');
             $table->timestamps();
         });
     }

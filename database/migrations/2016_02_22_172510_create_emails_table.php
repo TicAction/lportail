@@ -14,6 +14,11 @@ class CreateEmailsTable extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('email_date');
+            $table->string('subject');
+            $table->string('email_adress');
+            $table->string('cc');
+            $table->text('content');
             $table->timestamps();
         });
     }

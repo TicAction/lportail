@@ -14,6 +14,12 @@ class CreatePisTable extends Migration
     {
         Schema::create('pis', function (Blueprint $table) {
             $table->increments('id');
+            $table->date('pi_date');
+            $table->string('force');
+            $table->string('difficulty');
+            $table->string('intervention');
+            $table->string('todo');
+            $table->string('email');
             $table->timestamps();
         });
     }

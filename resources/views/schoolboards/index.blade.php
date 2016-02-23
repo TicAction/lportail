@@ -3,7 +3,7 @@
 @section('content')
 
 
-<h3>Page des Commissions scolaire inscrites</h3>
+<h3>Liste de CS</h3>
 
 @foreach($schoolboards as $cs)
     <ul class="list-unstyled">
@@ -13,7 +13,7 @@
         <li>{{$cs->zipcode}}</li>
         <li>{!! Html::link($cs->url) !!}</li>
     </ul>
-    <hr/>
+    <hr class="alert-success" style="height: 2px"/>
 @endforeach
 
     @endsection
