@@ -14,7 +14,12 @@ class CreateSchoolboardsTable extends Migration
     {
         Schema::create('schoolboards', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('name');
+            $table->string('adress_number');
+            $table->string('adress');
+            $table->string('phone');
+            $table->string('zipcode');
+            $table->string('url');
         });
     }
 

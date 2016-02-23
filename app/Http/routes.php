@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::resource('cs','SchoolboardController');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
