@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Navbar Template for Bootstrap</title>
+    <title>Le portail de l'éducation</title>
 
     <!-- Bootstrap core CSS -->
     {!! Html::style('css/bootstrap.css') !!}
@@ -29,6 +29,13 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style type="text/css">
+
+    body{
+        background-color: #1E1518;
+    }
+</style>
+
 </head>
 
 <body>
@@ -39,7 +46,12 @@
 
     <!-- Main component for a primary marketing message or call to action -->
     <div class="jumbotron">
+<div class="container-fluid">
+    <div class="col-md-offset-6 col-md-6 ">
 
+        <h1 class="text-left" style="color:white">Le portail de l'éducation</h1>
+    </div>
+</div>
 
 
     </div>

@@ -5,13 +5,12 @@
         </div>
         <div class="panel-body well">
             <ul class="list-unstyled">
-                <li><a href="#">Je suis le contenu 1 </a></li>
-                <li><a href="#">Je suis le contenu 2 </a></li>
-                <li><a href="#">Je suis le contenu 3 </a></li>
+                <li><a href="#">Ajouter un enfant</a></li>
+                <li><a href="#">Liste des messages </a></li>
+                <li><a href="#">Liste des devoirs</a></li>
             </ul>
 
 
         </div>
     </div>
-
 

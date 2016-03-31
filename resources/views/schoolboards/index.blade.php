@@ -4,7 +4,7 @@
 
     @foreach($schoolboards as $cs)
         <ul class="list-unstyled">
-            <li>{!! Html::link($cs->url, strtoupper($cs->name)) !!}</li>
+            <li>{!! Html::link(url('cs',$cs->id), strtoupper($cs->name)) !!}</li>
             <li>{{$cs->adress_number}} {{$cs->adress}}</li>
             <li>{{$cs->phone}}</li>
             <li>{{$cs->zipcode}}</li>

@@ -19,7 +19,8 @@ class CreatePisTable extends Migration
             $table->string('difficulty');
             $table->string('intervention');
             $table->string('todo');
-            $table->string('email');
+            $table->integer('kid_id')->unsigned()->index();
+            $table->foreign('kid_id')->references('id')->on('kids');
             $table->timestamps();
         });
     }

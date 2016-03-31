@@ -5,6 +5,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSchoolboardsTable extends Migration
 {
+
+
     /**
      * Run the migrations.
      *
@@ -15,12 +17,15 @@ class CreateSchoolboardsTable extends Migration
         Schema::create('schoolboards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('adress_number');
+            $table->string('region');
             $table->string('adress');
+            $table->string('city');
             $table->string('phone');
-            $table->string('zipcode');
+            $table->string('email');
             $table->string('url');
         });
+        
+
     }
 
     /**

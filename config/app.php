@@ -156,6 +156,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
         Intervention\Image\ImageServiceProviderLaravel5::class,
+        AdamWathan\BootForms\BootFormsServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -218,7 +219,7 @@ return [
         'Flash'     => Laracasts\Flash\Flash::class,
         'Gravatar'  => Creativeorange\Gravatar\Facades\Gravatar::class,
         'Image'     => Intervention\Image\Facades\Image::class,
-
+        'BootForm'  => AdamWathan\BootForms\Facades\BootForm::class,
 
     ],
 

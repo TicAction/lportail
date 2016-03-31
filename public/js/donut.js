@@ -1,3 +1,4 @@
-/**
- * Created by ghislain girard on 2016-02-25.
- */
+$('#donut').donut();
+$('#donut2').donut();
+
+

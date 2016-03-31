@@ -15,8 +15,9 @@ class School extends Model
         return $this->belongsTo('App\Schoolboard');
     }
 
-    public function teachers()
-    {
-        return $this->belongsToMany('App\Teacher','school_teachers')->withPivot('years');
-    }
+   public function classroom()
+   {
+      return $this->hasMany('App\Classroom');
+   }
+
 }

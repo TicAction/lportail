@@ -2,13 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\School;
+use App\Schoolboard;
+use App\SchoolTeacher;
+use App\Teacher;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class SchoolController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +28,11 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        //
+
+        $schools = School::orderBy('id','asc')->paginate(1);
+
+
+        return view('schools.index',compact('schools'));
     }
 
     /**
@@ -26,7 +42,8 @@ class SchoolController extends Controller
      */
     public function create()
     {
-        //
+        $cs = Schoolboard::orderBy('name','ASC')->get();
+        return view('schools.create',compact('cs'));
     }
 
     /**
@@ -37,7 +54,38 @@ class SchoolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+//        $teacher = Teacher::create([
+//            'username'=> $request->get('username'),
+//            'firstname'=> $request->get('firstname'),
+//            'lastname'=> $request->get('lastname'),
+//            'email'=> $request->get('email'),
+//            'password'=> $request->get('password'),
+//
+//
+//        ]);
+//
+//
+//        $school =School::create([
+//            'name'=> $request->get('name'),
+//            'adress_number'=>$request->get('adress_number'),
+//            'adress'=>$request->get('adress'),
+//            'phone'=>$request->get('phone'),
+//            'zipcode'=>$request->get('zipcode'),
+//            'url'=>$request->get('url'),
+//            'schoolboard_id'=>$request->get('schoolboard_id'),
+//        ]);
+//
+//
+//
+//        $ts = SchoolTeacher::create([
+//            'teacher_id' => $teacher->id,
+//            'school_id' => $school->id,
+//            'years'=>'3e année',
+//        ]);
+
+
+        return redirect('school');
     }
 
     /**

@@ -11,4 +11,9 @@ class Behavior extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = ['behave_date','content','publish'];
+
+    public function kids()
+    {
+        return $this->belongsTo('App\Kid');
+    }
 }

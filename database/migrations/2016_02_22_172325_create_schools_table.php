@@ -5,6 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSchoolsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -20,7 +21,11 @@ class CreateSchoolsTable extends Migration
             $table->string('phone');
             $table->string('zipcode');
             $table->string('url');
+            $table->integer('schoolboard_id')->unsigned()->index();
+            $table->foreign('schoolboard_id')->references('id')->on('schoolboards');
         });
+
+
     }
 
     /**

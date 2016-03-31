@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Schoolboard extends Model
 {
+
     protected $fillable = [
         'name','region',
         'adress','city','phone','email',
